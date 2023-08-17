@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tripsy - Explore the World</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="templates/favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+    {% load static %}
+  <style>
+        .cards {
+  display:flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 90px;
+  margin-left: 50px;
+  }
+
+  .cards .red {
+    background-color: #f43f5e;
+  }
+
+  .cards .blue {
+    background-color: #3b82f6;
+  }
+
+  .cards .green {
+    background-color: #22c55e;
+  }
+
+  .cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 150px;
+    width: 550px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+  }
+
+  .cards .card p.tip {
+    font-size: 1em;
+    font-weight: 700;
+    color: white;
+  }
+
+  .cards .card p.second-text {
+    font-size: .7em;
+    color: white;
+  }
+
+  .cards .card:hover {
+    transform: scale(1.1, 1.1);
+  }
+
+  .cards:hover > .card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
+
+  .sec{
+      background-image: url('{% static "/images/maybebg.jpg" %}');
+      background-size:cover;
+	    background-position: center;
+  }
+
+</style>
+</head>
+
+<body class="sec">
+    <section >
+    <div class="container-fluid">
+        <div class="cards">
+            <div class="card red">
+                <button>
+                <p class="tip"><h1><a href="{% url 'login' %}">LOGIN</a></h1></p>
+                <p class="second-text">If you have already created your account, Click ME</p></button>
+            </div>
+            <div class="card blue">
+              <button>
+                <p class="tip"><h1><a href="{% url 'register' %}">NEW USER</a></h1></p>
+                <p class="second-text">If you have not created your account, Click ME</p></button>
+            </div>
+            <div class="card green">
+            <button>
+                <p class="tip"><h1><a href="{% url 'adminn_login' %}">ADMIN PAGE</a></h1></p>
+                <p class="second-text">If you are an ADMIN of this website, Click ME <span><p><b>Password Protected</b></p></span></p></button>
+            </div>
+              </figure>
+        </div>
+    </div>
+</section>
+
+
+</body>
+
+</html>

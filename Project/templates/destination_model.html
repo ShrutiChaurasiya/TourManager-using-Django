@@ -1,0 +1,87 @@
+{% include 'admin_navbar.html' %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="nav">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'adminn_homepg' %}"><i class="bi bi-house-fill"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'adminn_homepg' %}">Home</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'places_model' %}">Places</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'booking_model' %}">Booking</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'logout' %}">Exit</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+		<section class="ftco-section bg-light">
+      <br>
+      <h1 style="margin-left: 15cm;"><span style="font-family: 'Times New Roman', Times, serif;">Destination Model Access</span></h1><hr>
+  
+      <section class="ftco-section bg-light">
+        <div>
+          <a class="btn btn-warning btn-lg m-3" role="button" aria-disabled="true" href="{% url 'add_destination' %}"> +Destination_Model</a>
+        </div><br>
+    	<div class="container">
+			
+    		<div class="row">
+				{% for i in dm_obj %}
+    			<div class="col-md-4">
+    				<div class="card-wrap rounded ">
+    					<div id="" class="img rounded d-flex align-items-end" >
+                <img src="/media/{{i.image}}" class="card-img-top" alt="No Image" height="220px" name="image" >
+    					</div>
+    					<div class="text">
+    						<h2 class="mb-0"><a href="">{{i.places}}</a></h2>
+    						<div class="d-flex mb-3">
+	    						<p class="price ml-auto"> {{i.quote}}</p>
+                </div>
+                <div class="d-flex mb-3">
+                  <p class="price ml-auto">₹ {{i.amount}} /person</p>
+                </div>
+                            
+    					</div>
+    				</div>
+            <table>
+              <tr>
+              
+                <td>
+                  <form action = "{% url 'deletee_dest' i.id %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{i.id}}">
+                    <input class="btn btn-danger" onclick="return confirm('Are you sure you want to delete {{i.place}}?')" type="submit" value="Delete">
+                    </form>
+                  </td>
+
+                  <td>
+                    <form action = "{% url 'update_dest' i.id %}" method="get">
+                      {% csrf_token %} 
+                      <input type="hidden" name="id" value="{{i.id}}">
+                      <input class="btn btn-primary" type="submit" value="  Edit  ">
+                      </form>
+                    </td>
+                  </tr>
+                </table>
+                <hr>
+              </div>
+              
+				{% endfor %}
+                
+    </section>
+  </body>
+</html>
