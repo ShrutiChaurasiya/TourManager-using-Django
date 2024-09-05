@@ -1,7 +1,7 @@
-TourManager - using Django
+# TourManager - using Django
 
 
-DESCRIPTION : 
+# DESCRIPTION : 
 
 1. It is Django based project which helps the user book their holiday tours , The website has all the major attractions in the package.
 2. The Admin section is password protected.
@@ -9,7 +9,7 @@ DESCRIPTION :
 
 
 
-TABLE OF CONTENTS:
+# TABLE OF CONTENTS:
 
 1. About the Project
 2. Features
@@ -18,7 +18,7 @@ TABLE OF CONTENTS:
 5.Admin Control
 
 
-ABOUT PROJECT:
+# ABOUT PROJECT:
 
 1. INDEX PAGE: The Index page has three options Login , New User and Admin Login
 2. LOGIN PAGE: The Login Page has Authentication and Validations.
@@ -31,7 +31,7 @@ ABOUT PROJECT:
 
 
 
-FEATURES:
+# FEATURES:
 
 1. Browse and select from a variety of tour packages.
 2. Booking option for users to reserve their tours.
@@ -41,7 +41,7 @@ FEATURES:
 
 
 
-BUILT WITH:
+# BUILT WITH:
 1. Django
 2. Bootstrap
 3. HTML
@@ -50,13 +50,15 @@ BUILT WITH:
 6. Python
 
 
-PREREQUISITIES:
+# PREREQUISITIES:
 
 1. Virtual Environment: for ease.
 2. Django Application.
 3. Pillows: for displaying Images.
 
-ADMIN CONTROLS: 
+# ADMIN CONTROLS: 
+
 username: admin
+
 password: 123
 
