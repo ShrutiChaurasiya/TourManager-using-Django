@@ -15,7 +15,8 @@
 2. Features
 3. Built With
 4. Prerequisites
-5.Admin Control
+5. Admin Control
+6. ScreenShots
 
 
 # ABOUT PROJECT:
@@ -61,4 +62,26 @@
 username: admin
 
 password: 123
+
+# ScreenShots
+
+1. Index Page    About Us Section ![image](https://github.com/user-attachments/assets/b7c7038d-2fef-474e-86aa-1bade7799d07)
+
+2. Login Page    ![image](https://github.com/user-attachments/assets/75f35e2c-4a01-43a2-819b-fe4149eeeb50)
+
+3. Register Page  ![image](https://github.com/user-attachments/assets/708de1eb-0537-4d9c-a5cb-3ffb5e3d8d41)
+
+4. Packages Page   ![image](https://github.com/user-attachments/assets/00143403-1a7c-414d-b25d-b5811f1d16e9)
+
+5. Book Tickets Page   ![image](https://github.com/user-attachments/assets/485fa8cd-5658-400a-9a87-bbbd3b2e28e9)
+
+6. Admin Page  ![image](https://github.com/user-attachments/assets/727a7b05-f4a2-40a2-977c-bd3e18ab933f)
+
+7. Admin DataBase Access  ![image](https://github.com/user-attachments/assets/e6981bba-26f7-4b7d-a47d-0f9b10b594d8)
+
+8. User Bookings Page  ![image](https://github.com/user-attachments/assets/2f8a475a-5fad-4c71-b02d-df1bf8fb6c38)
+
+   
+
+
 
